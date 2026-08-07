@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday </title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="cursor-glow"></div>
+
+    <div class="ambient-glow"></div>
+
+    <div class="container">
+
+<p class="tagline">
+    ✨ A Special Surprise For Someone Amazing ✨
+</p>
+
+<h1 id="title">
+    Happy Birthday
+  <span id="personName"> {NAME} </span>
+</h1>
+
+<p class="subtitle">
+    Every beautiful memory begins with one special moment...
+</p>
+
+<button id="openBtn">
+   🎁 Open Your Surprise ✨
+</button>
+
+</div>
+
+<div class="shooting-stars">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<div id="effects"></div>
+
+<div id="revealScreen">
+
+
+    <div class="gift-stars">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+    
+<div class="flash"></div>
+
+<div class="gift-scene">
+
+<!-- Cinematic night backdrop: nebula fog, light rays, stars, dust, shooting stars -->
+      <div class="cinema-bg">
+          <div class="nebula nebula-1"></div>
+          <div class="nebula nebula-2"></div>
+          <span class="bokeh b1"></span>
+          <span class="bokeh b2"></span>
+          <span class="bokeh b3"></span>
+          <span class="bokeh b4"></span>
+          <span class="bokeh b5"></span>
+          <span class="bokeh b6"></span>
+          <div class="light-rays"></div>
+          <div class="star-field"></div>
+          <div class="dust-field"></div>
+          <div class="nebula-vignette"></div>
+          <div class="scene-shooting-stars"></div>
+      </div>
+
+      <div class="gift-wrap">
+
+      <div class="gift-box">
+
+    <div class="gift-glow"></div>
+
+    <div class="gift-shadow"></div>
+
+     <div class="energy-burst"></div>
+
+     <div class="spark-container"></div>
+
+    <div class="gift-lid">
+
+        <div class="gift-bow">
+            <span></span>
+            <span></span>
+            <span class="bow-middle"></span>
+        </div>
+
+        <div class="gift-edge-glow"></div>
+
+    </div>
+
+    <div class="gift-body">
+
+        <div class="gift-reflect"></div>
+
+        <div class="gift-ribbon-v"></div>
+
+        <div class="gift-ribbon-h"></div>
+
+    </div>
+
+    <div class="gift-breath-glow"></div>
+
+</div>
+
+      </div>
+
+        <p class="gift-text">
+            Click the gift...
+        </p>
+
+    </div>
+
+    <!--
+<div class="photo-gallery">
+
+    <img src="assets/images/photo1.jpg" class="photo p1">
+
+</div>
+-->
+
+<div class="photo-stack">
+
+    <img src="assets/images/photo1.jpg" class="photo card1">
+
+    <img src="assets/images/photo2.jpg" class="photo card2">
+
+    <img src="assets/images/photo3.jpg" class="photo card3">
+
+    <img src="assets/images/photo4.jpg" class="photo card4">
+
+<img src="assets/images/photo5.jpg" class="photo card5">
+
+</div>
+
+<!-- ============================================
+     TYPEWRITER MESSAGE OVERLAY (after photo reveal)
+================================================ -->
+<div class="message-overlay">
+
+    <div class="message-dim"></div>
+
+    <div class="message-glow"></div>
+
+    <div class="message-text">
+
+<span class="type-line" id="line1"></span>
+        <span class="type-line" id="line2"></span>
+
+    </div>
+
+</div>
+
+<!-- ============================================
+     BIRTHDAY STORYBOOK (after typewriter message)
+================================================ -->
+<div class="storybook">
+
+    <div class="book">
+
+        <!-- Closed cover -->
+        <div class="book-cover">
+            <div class="cover-face">
+                <span class="cover-emoji">🎂</span>
+                <h2 class="cover-title">Happy Birthday</h2>
+                <span class="cover-name"> {name}</span>
+                <span class="cover-hint">Click to Open</span>
+            </div>
+        </div>
+
+<!-- Open scrapbook pages -->
+        <div class="book-inner">
+
+            <!-- LEFT page: photo -->
+            <div class="page-left">
+                <div class="page-tape"></div>
+                <img class="page-img" src="" alt="Memory">
+                <span class="page-photo-label">Memory ✨</span>
+            </div>
+
+            <!-- RIGHT page: birthday message -->
+            <div class="page-right">
+                <div class="page-tape"></div>
+                <h3 class="page-title">A Little Note For You</h3>
+                <p class="page-wish"></p>
+                <span class="page-doodle">🎂</span>
+            </div>
+
+            <!-- Animated leaf for the page turning -->
+            <div class="flip-leaf">
+                <div class="flip-front">
+                    <img class="flip-img" src="" alt="Memory">
+                    <span class="flip-label">Memory ✨</span>
+                </div>
+                <div class="flip-back">
+                    <h3 class="flip-title">A Little Note For You</h3>
+                    <p class="flip-wish"></p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Navigation -->
+        <div class="book-nav">
+            <button class="nav-btn" id="prevBtn">← Previous</button>
+            <span class="page-indicator" id="pageIndicator">Page 1 of 1</span>
+            <button class="nav-btn" id="nextBtn">Next →</button>
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
