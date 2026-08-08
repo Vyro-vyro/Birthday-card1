@@ -23,6 +23,31 @@
 
     <div class="container">
 
+    <div class="card-shine"></div>
+    <div class="card-dust"></div>
+
+<div class="birthday-icon">
+    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="14" y="30" width="36" height="22" rx="4" fill="url(#cakeBody)"/>
+        <rect x="14" y="24" width="36" height="7" rx="2" fill="#ff6ea1"/>
+        <circle cx="26" cy="19" r="8" fill="url(#frostHead)"/>
+        <rect x="20" y="14" width="8" height="10" rx="1.5" fill="#ff4d88"/>
+        <rect x="36" y="14" width="8" height="10" rx="1.5" fill="#ff4d88"/>
+        <line x1="40" y1="6" x2="40" y2="14" stroke="#ff8a4a" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="40" cy="4" r="2" fill="#ffb86c"/>
+        <defs>
+            <linearGradient id="cakeBody" x1="14" y1="30" x2="50" y2="52" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#ff8ab0"/>
+                <stop offset="1" stop-color="#e94f86"/>
+            </linearGradient>
+            <linearGradient id="frostHead" x1="18" y1="11" x2="34" y2="27" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#ffffff"/>
+                <stop offset="1" stop-color="#ffd7e6"/>
+            </linearGradient>
+        </defs>
+    </svg>
+</div>
+
 <p class="tagline">
     ✨ A Special Surprise For Someone Amazing ✨
 </p>
@@ -62,7 +87,7 @@
 <div id="revealScreen">
 
 
-    <div class="gift-stars">
+<div class="gift-stars">
     <span></span>
     <span></span>
     <span></span>
@@ -70,26 +95,24 @@
     <span></span>
 </div>
     
-<div class="flash"></div>
+<!-- Full-screen cinematic night backdrop: nebula fog, light rays, stars, dust, shooting stars -->
+<div class="cinema-bg">
+    <div class="nebula nebula-1"></div>
+    <div class="nebula nebula-2"></div>
+    <span class="bokeh b1"></span>
+    <span class="bokeh b2"></span>
+    <span class="bokeh b3"></span>
+    <span class="bokeh b4"></span>
+    <span class="bokeh b5"></span>
+    <span class="bokeh b6"></span>
+    <div class="light-rays"></div>
+    <div class="star-field"></div>
+    <div class="dust-field"></div>
+    <div class="nebula-vignette"></div>
+    <div class="scene-shooting-stars"></div>
+</div>
 
 <div class="gift-scene">
-
-<!-- Cinematic night backdrop: nebula fog, light rays, stars, dust, shooting stars -->
-      <div class="cinema-bg">
-          <div class="nebula nebula-1"></div>
-          <div class="nebula nebula-2"></div>
-          <span class="bokeh b1"></span>
-          <span class="bokeh b2"></span>
-          <span class="bokeh b3"></span>
-          <span class="bokeh b4"></span>
-          <span class="bokeh b5"></span>
-          <span class="bokeh b6"></span>
-          <div class="light-rays"></div>
-          <div class="star-field"></div>
-          <div class="dust-field"></div>
-          <div class="nebula-vignette"></div>
-          <div class="scene-shooting-stars"></div>
-      </div>
 
       <div class="gift-wrap">
 
@@ -182,6 +205,12 @@
 ================================================ -->
 <div class="storybook">
 
+<!-- Full-screen static background image -->
+    <div class="storybook-bg"></div>
+
+    <!-- Premium dark gradient overlay above the video -->
+    <div class="storybook-overlay"></div>
+
     <div class="book">
 
         <!-- Closed cover -->
@@ -189,7 +218,7 @@
             <div class="cover-face">
                 <span class="cover-emoji">🎂</span>
                 <h2 class="cover-title">Happy Birthday</h2>
-                <span class="cover-name"> {name}</span>
+                <span class="cover-name"> Recipient Name</span>
                 <span class="cover-hint">Click to Open</span>
             </div>
         </div>
