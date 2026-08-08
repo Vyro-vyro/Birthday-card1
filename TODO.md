@@ -1,29 +1,22 @@
-# Cinematic Luxury Gift Reveal Scene
+# Birthday Surprise - Task Progress
 
-Task: Redesign only the gift reveal scene with a premium cinematic look.
-Do NOT touch the landing page, photo reveal, typewriter message, or storybook.
+## Storybook Background Replacement
+- [x] index.html: Replaced `<video class="storybook-video">` with `<div class="storybook-bg">`
+- [x] style.css: Replaced `.storybook-video` rule with `.storybook-bg` rule (static image background using `story-bg.png`)
+- [x] style.css: Updated `.storybook-overlay` gradient to premium dark overlay `rgba(10,10,20,.45)` / `rgba(25,15,35,.55)`
+- [x] Kept glass Storybook card (`.book`) above the background
 
-## Gift Scene Redesign
+## Photo Reveal Restore (follow-up)
+- [x] index.html: Removed `.flash`, `.reveal-dark`, `.reveal-fx` effect layers
+- [x] style.css: `.photo` restored to original flip/spin entrance (`translateY(120px) scale(.1) rotate(-720deg)`)
+- [x] style.css: Restored original desktop `.cardN.show` collage positions
+- [x] style.css: Removed `.photo-stack.focus` blur rule
+- [x] style.css: Removed glass/glow blur panel from `.message-text` (back to original)
+- [x] script.js: Photo Reveal flow simplified to: gift -> 5 photos -> centered message -> Storybook
 
-- [x] index.html: cinematic night backdrop (cinema-bg, bokeh orbs, light-rays, dust-field)
-- [x] index.html: wrap gift in `.gift-wrap` (hover scale + parallax)
-- [x] index.html: premium gift detail (bow-middle, edge-glow, reflect, breath-glow, shadow)
-- [x] style.css: deep cinematic night background for #revealScreen
-- [x] style.css: volumetric light rays + slow drifting bokeh + dust particles
-- [x] style.css: luxury matte gift box with rounded edges, satin ribbon, smooth bow, reflections
-- [x] style.css: breathing glow under box, edge light leak pulse, realistic floor shadow
-- [x] style.css: slow cinematic camera drift + subtle parallax
-- [x] style.css: hover (glow boost + ribbon shine) — scale combined in JS
-- [x] style.css: heavier, smoother lid opening animation
-- [x] style.css: mobile responsive sizing for new gift elements
-- [x] script.js: populate soft dust particles
-- [x] script.js: slow parallax between background and gift (with hover scale)
-- [x] script.js: keep shake, refine lid opening timing (class-based, weighty easing)
-- [x] Verify in browser
+## Unmodified
+- Landing Page
+- Gift Scene
+- Storybook (beyond background swap)
+- Page transitions, messages, buttons, JavaScript logic, layout
 
-## Not Modified
-- Landing page
-- Photo reveal sequence
-- Typewriter message overlay
-- Storybook
-- Flash animation
