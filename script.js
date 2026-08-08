@@ -37,6 +37,62 @@ document.addEventListener("mousemove",(e)=>{
 
 }
 
+/* ===== Micro dust particles inside the landing card ===== */
+
+const cardDust = document.querySelector(".card-dust");
+
+if (cardDust) {
+
+    for (let i = 0; i < 18; i++) {
+
+        const dust = document.createElement("span");
+
+        const size = Math.random() * 3 + 1.5;
+
+        dust.style.width = size + "px";
+        dust.style.height = size + "px";
+        dust.style.left = (5 + Math.random() * 90) + "%";
+        dust.style.top = (10 + Math.random() * 80) + "%";
+
+        dust.style.animationDuration = (6 + Math.random() * 8) + "s";
+        dust.style.animationDelay = Math.random() * 10 + "s";
+
+        cardDust.appendChild(dust);
+
+    }
+
+}
+
+/* ===== Ripple effect on the open button ===== */
+
+const openBtn = document.getElementById("openBtn");
+
+if (openBtn) {
+
+    openBtn.addEventListener("click", (e) => {
+
+        const rect = openBtn.getBoundingClientRect();
+
+        const ripple = document.createElement("span");
+
+        ripple.className = "ripple";
+
+        const size = Math.max(rect.width, rect.height) * 1.2;
+
+        ripple.style.width = size + "px";
+        ripple.style.height = size + "px";
+
+        ripple.style.left = (e.clientX - rect.left - size / 2) + "px";
+        ripple.style.top = (e.clientY - rect.top - size / 2) + "px";
+
+        openBtn.appendChild(ripple);
+
+        setTimeout(() => ripple.remove(), 700);
+
+    });
+
+}
+
 /* ===== Open Reveal Screen ===== */
 
 const button=document.getElementById("openBtn");
@@ -54,8 +110,6 @@ const gift=document.querySelector(".gift-box");
 const lid=document.querySelector(".gift-lid");
 
 const burst = document.querySelector(".energy-burst");
-
-const flash = document.querySelector(".flash");
 
 const cards = document.querySelectorAll(".photo-stack .photo");
 const sparkContainer = document.querySelector(".spark-container");
@@ -200,40 +254,38 @@ setTimeout(() => {
 
 createSparkBurst();
 
-// White flash
-setTimeout(() => {
+// >>> PHOTO REVEAL (REVERTED FLOW) <<<
 
-    flash.classList.add("show");
+        // Hide the gift scene behind the reveal
+        setTimeout(() => {
 
-    setTimeout(() => {
-        flash.classList.remove("show");
-    }, 800);
+            document.querySelector(".gift-scene").style.display = "none";
 
-}, 600);
+        }, 650);
 
-// Show photos
-        setTimeout(()=>{
+        // 5 photos appear with a smooth fade + slight scale settle
+        // (no camera blur, no dark transition, no flash, no sparkles)
+        setTimeout(() => {
 
-            document.querySelector(".gift-scene").style.display="none";
+            cards.forEach((card, index) => {
 
-            cards.forEach((card,index)=>{
-
-                setTimeout(()=>{
+                setTimeout(() => {
 
                     card.classList.add("show");
 
-                },index*400);
+                }, index * 200);
 
             });
 
-        },1300);
+        }, 800);
 
-        // After all photos settle (~4300ms) + 2s wait, show the message
-        setTimeout(()=>{
+        // After a short pause, show the centered message (fade in),
+        // then continue to the Storybook once the message fades out.
+        setTimeout(() => {
 
             showTypewriterMessage();
 
-        },6300);
+        }, 3000);
 
     },720);
 
